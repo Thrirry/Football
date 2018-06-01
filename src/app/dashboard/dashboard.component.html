@@ -115,7 +115,7 @@
                       <td>{{water.name}}</td>
                       <td>{{water.price}}</td>
                       <td>
-                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" data-toggle="modal" data-target="#exampleModal" data-whatever="@inputID">
                         <i class="material-icons">edit</i>
                         </button>
                       </td>
@@ -133,59 +133,53 @@
               </div>
               
               <div class="tab-pane" id="messages">
-                  <table class="table table-hover">
-                    <thead class="text-warning">
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Price (vnd)</th>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor = "let food of food">
-                        <td>{{food.id}}</td>
-                        <td>{{food.name}}</td>
-                        <td>{{food.price}}</td>
-                        <td>
-
-
-<!--           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
-
-
-                   <!--      <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" data-toggle="modal" data-target="#exampleModal"  >
+                <table class="table table-hover">
+                  <thead class="text-warning">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price (vnd)</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor = "let food of food">
+                      <td>{{food.id}}</td>
+                      <td>{{food.name}}</td>
+                      <td>{{food.price}}</td>
+                      <td>
+                        <!--           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
+                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" data-toggle="modal" data-target="#exampleModal" data-whatever="@inputID">
                         <i class="material-icons">edit</i>
-                        </button> -->
-
-                        <button mat-button (click)="openDialog()">Open dialog</button>
-
+                        </button>
+                        <!-- <button mat-button (click)="openDialog()">Open dialog</button> -->
                       </td>
                       <td>
                         <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
                         <i class="material-icons">close</i>
                         </button>
                       </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="col-md-4">
-                    <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','center')">View More</button>
-                  </div>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="col-md-4">
+                  <button mat-raised-button class="btn btn-danger btn-block" (click)="showNotification('bottom','center')">View More</button>
                 </div>
-                <div class="tab-pane" id="settings">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
-                         <td>
-                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+              </div>
+              <div class="tab-pane" id="settings">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                      <td>
+                        <button mat-raised-button type="button" matTooltip="Edit Task" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon" data-toggle="modal" data-target="#exampleModal" data-whatever="@inputID">
                         <i class="material-icons">edit</i>
                         </button>
                       </td>
@@ -194,104 +188,94 @@
                         <i class="material-icons">close</i>
                         </button>
                       </td>
-                      </tr>
-                      <tr>
-                        
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                    </tr>
+                    <tr>
+                      
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="card">
-            <div class="card-header card-header-info">
-              <h4 class="card-title">Customer paid status</h4>
-              <p class="card-category">10 days ago</p>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="card">
+          <div class="card-header card-header-info">
+            <h4 class="card-title">Customer paid status</h4>
+            <p class="card-category">10 days ago</p>
+          </div>
+          <div class="card-body table-responsive">
+            <table class="table table-hover">
+              <thead class="text-warning">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price (vnd)</th>
+                <th>Phone Number</th>
+                <th>Date</th>
+              </thead>
+              <tbody>
+                <tr *ngFor = "let customers of customer">
+                  <td>{{customers.id}}</td>
+                  <td>{{customers.name}}</td>
+                  <td>{{customers.cost}}</td>
+                  <td>{{customers.phonenumber}}</td>
+                  <td>{{customers.date}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!--
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div class="card-body table-responsive">
-              <table class="table table-hover">
-                <thead class="text-warning">
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Price (vnd)</th>
-                  <th>Phone Number</th>
-                  <th>Date</th>
-                </thead>
-                <tbody>
-                  <tr *ngFor = "let customers of customer">
-                    <td>{{customers.id}}</td>
-                    <td>{{customers.name}}</td>
-                    <td>{{customers.cost}}</td>
-                    <td>{{customers.phonenumber}}</td>
-                    <td>{{customers.date}}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="form-control-label">Id:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="form-control-label">Product Name:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
             </div>
           </div>
         </div>
-
-<!-- 
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button> -->
-
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="recipient-name" class="form-control-label">Recipient:</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                      <label for="message-text" class="form-control-label">Message:</label>
-                      <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Send message</button>
-                </div>
-              </div>
+      </div>
+      <!--           <a href="#my_modal" data-toggle="modal" data-book-id="my_id_value">Open Modal</a>
+      <div class="modal" id="my_modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title">Modal header</h4>
+            </div>
+            <div class="modal-body">
+              <p>some content</p>
+              <input type="text" name="bookId" value=""/>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
-
-
-
-
-<!--           <a href="#my_modal" data-toggle="modal" data-book-id="my_id_value">Open Modal</a>
-
-<div class="modal" id="my_modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title">Modal header</h4>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>some content</p>
-        <input type="text" name="bookId" value=""/>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      -->
     </div>
   </div>
 </div>
- -->
-
-
-      </div>
-    </div>
-  </div>
-
