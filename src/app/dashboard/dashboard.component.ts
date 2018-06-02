@@ -37,7 +37,8 @@ export class DashboardComponent implements OnInit {
      this.water = ROUTES.filter(water => water);
      this.food = FOOD.filter(food => food);
      this.customer = ROUTECUSTOMER.filter(customer => customer);
-     $.getScript('../../../assets/js/modal.js'); 
+     // $.getScript('../../../assets/js/modal.js'); 
+     $.getScript('../../../assets/js/popup.js'); 
   }
 
 
